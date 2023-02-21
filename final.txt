@@ -1,0 +1,95 @@
+TITLE: Joshua Munich Teves, Section E, Solar System Planet Library
+
+PROBLEM DESCRIPTION: The goal of this project is to create a program that will act
+as a digital library of the planets of our solar system. The user will be able to
+select what planet they would like to view, and the program will access different
+facts and statistics about said planet (such as composition of the atmosphere,
+mass, density, and radius). In addition, SFML is used in order to display
+a photograph of each planet.
+
+PROGRAM DOCUMENTATION: The program's user input are integers between 0 to 8,
+and characters: 'y', 'n', 'Y', or 'N'. The program will prompt the user
+for the appropriate input, as applicable (make sure to read the prompts,
+they are a bit wordy due to the amount of information available).
+
+The program can be modified by including more statistics about planets.
+Some examples are things like the volume of each planet, escape velocity,
+axial tilt, core radius, and orbital velocity.
+
+The volume, escape velocity, axial tilt, core radius, and orbital velocity
+can be implemented as doubles in the private portion of the Planet class,
+with appropriate getter functions (and setters, but that did not end up being
+necessary as the program did not modify planet information during execution.
+After all, that would be a bit unrealistic, being able to change information
+of the planets in the solar system on a whim).
+
+Additional menu options would need to be added (the program's input function
+has a limit of 8 available integers, so additional menus would need to be
+added in order to compensate for more information to show).
+
+TESTS: Test One: First menu has three options, 0 to 2. Program does not break
+when entering a space or a newline, a character, a string of characters,
+doubles/floats, negatives, or invalid integers (the program will keep
+requesting for a valid integer). 
+
+Test Two: When entering 1 to view the different planets, the above incorrect
+inputs will still cause the program to keep requesting for a valid integer. 
+The program does not crash.
+
+Test Three: When viewing a planet's different statistics and when the program
+prompts to enter y/n (or Y/N) to see if the user would like to output the
+shown information to a file, the program does not break when entering
+a string, doubles/floats, negatives, integers, spaces, newlines, or an
+invalid character. The program will keep requesting for a valid character
+as input. In addition, after entering 'y' or 'Y', the program's output file
+(planetinformationoutput.txt) outputs the correct information for said planet.
+
+Test Four: When in any of the menus, entering 0 at any time will cause the
+program to go back to the previous menu, as intended. If on the first menu
+where the choices are from 0 to 2, the program ends when 0 is entered, which
+is intended.
+
+Test Five: Viewing and outputting any planet information, then going back to
+the main menu and viewing the photos for each planet will work. The program
+also still works when starting it then viewing the photos right away. When
+closing the window that appears which shows the planet photos, the program does
+not end but rather prompts you as to whether you would like to see a photo
+of another planet (options 1 to 8). Viewing multiple photos in one run does
+not break the program. Closing the window does not end the program, which is
+intended as the only way to exit the program is entering 0 on the main menu
+(where the options are only from 0 to 2).
+
+Test Six: Submitting invalid inputs when the program asks what planets
+you would like to see photos of does not break the program. Again, the
+program asks for a valid integer from 0 to 8. Any input that is invalid
+is rejected and the program will keep requesting for valid input until
+it is given. Invalid input is, similar to other menus, are strings,
+characters, doubles/floats, negative numbers, and integers greater than
+8.
+
+REFLECTIONS: I learned how incredibly painful it is to make sure that input
+is valid while programming in C++. The actual logic of the code was not
+difficult and I had little to no problems at all, even when attempting
+to incorporate SFML into the project. I would have to say that troubleshooting
+invalid input and making sure nothing broke as a result of it was the most
+time-consuming part of the project. I estimate up to eight hours were spent
+on that part alone, and it was not at all enjoyable compared to coding the
+actual program itself.
+
+I learned a great deal about using classes, as well as using another class
+with a class. The project helped me do incremental programming on a large scale,
+similar to my final project for CSCI 101 (which I argue was more complicated than
+this project, yet shorter. That may be due to the nature of Python compared to
+C++). By far this was the largest program I have ever written. Not even including
+the classes and header files, the main program reached 673 lines. It could
+have been shortened down more through the use of more functions, but the 673 lines
+already had utilized functions in order to simplify the code (print functions and
+input functions were especially important). 
+
+Overall, it was fun to do except for debugging bad input from the user. Compared
+to Python, it was much more difficult to do in C++ and I had to go to multiple
+office hours until a TA helped me for the full two hour session (we figured it out
+at the very end of the two hours allotted for TA help that night). It seemed as
+we tried more and more avenues of solving the problem, more problems came up
+along the way which forced us to take another route or to implement another
+solution to our current solution.
